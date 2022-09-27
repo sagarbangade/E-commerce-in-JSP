@@ -45,8 +45,7 @@ public boolean checkEmail(String email) throws ClassNotFoundException, SQLExcept
 {
 	con = getConnection();
 	String sql = "SELECT * FROM adminuser WHERE email =?";
-	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, 
-            ResultSet.CONCUR_UPDATABLE);
+	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 	
 	ps.setString(1,email);
 	
@@ -55,6 +54,19 @@ public boolean checkEmail(String email) throws ClassNotFoundException, SQLExcept
 	boolean a = rs.absolute(1);
 //	PreparedStatement ps = getConnection().prepareStatement(arg0);
 //	return ps.executeUpdate();
+	return a;
+}
+
+public boolean checkUser(String email,String pass) throws ClassNotFoundException, SQLException
+{
+	String sql="SELECT * FROM adminuser WHERE email=? and pass=?";
+	PreparedStatement ps=getConnection().prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+
+	ps.setString(1,email);
+	ps.setString(2,pass);
+	
+	ResultSet rs=ps.executeQuery();
+	boolean a=rs.absolute(1);
 	return a;
 }
 
