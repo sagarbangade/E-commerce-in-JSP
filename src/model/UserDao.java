@@ -70,4 +70,21 @@ public boolean checkUser(String email,String pass) throws ClassNotFoundException
 	return a;
 }
 
+public int countUser() throws ClassNotFoundException, SQLException
+{
+	con = getConnection();
+	String sql = "SELECT COUNT(*) FROM adminuser";
+	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+	
+	
+	
+	
+	ResultSet rs = ps.executeQuery();
+	rs.next();
+	int a = rs.getInt(1);
+//	PreparedStatement ps = getConnection().prepareStatement(arg0);
+//	return ps.executeUpdate();
+	return 10;
+}
+
 }
