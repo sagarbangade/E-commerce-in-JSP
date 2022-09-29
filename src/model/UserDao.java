@@ -73,7 +73,7 @@ public boolean checkUser(String email,String pass) throws ClassNotFoundException
 public int countUser() throws ClassNotFoundException, SQLException
 {
 	con = getConnection();
-	String sql = "SELECT COUNT(*) FROM adminuser";
+	String sql = "SELECT COUNT(*) FROM user";
 	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 	
 	
@@ -84,7 +84,58 @@ public int countUser() throws ClassNotFoundException, SQLException
 	int a = rs.getInt(1);
 //	PreparedStatement ps = getConnection().prepareStatement(arg0);
 //	return ps.executeUpdate();
-	return 10;
+	return a;
+}
+
+public int countProduct() throws ClassNotFoundException, SQLException
+{
+	con = getConnection();
+	String sql = "SELECT COUNT(*) FROM product";
+	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+	
+	
+	
+	
+	ResultSet rs = ps.executeQuery();
+	rs.next();
+	int a = rs.getInt(1);
+//	PreparedStatement ps = getConnection().prepareStatement(arg0);
+//	return ps.executeUpdate();
+	return a;
+}
+
+public int countPurches() throws ClassNotFoundException, SQLException
+{
+	con = getConnection();
+	String sql = "SELECT COUNT(*) FROM purches";
+	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+	
+	
+	
+	
+	ResultSet rs = ps.executeQuery();
+	rs.next();
+	int a = rs.getInt(1);
+//	PreparedStatement ps = getConnection().prepareStatement(arg0);
+//	return ps.executeUpdate();
+	return a;
+}
+
+public int countOrder() throws ClassNotFoundException, SQLException
+{
+	con = getConnection();
+	String sql = "SELECT COUNT(*) FROM orders";
+	PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+	
+	
+	
+	
+	ResultSet rs = ps.executeQuery();
+	rs.next();
+	int a = rs.getInt(1);
+//	PreparedStatement ps = getConnection().prepareStatement(arg0);
+//	return ps.executeUpdate();
+	return a;
 }
 
 }

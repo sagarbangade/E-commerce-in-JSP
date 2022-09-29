@@ -292,9 +292,6 @@
                 <%=new UserDao().countUser() %>
                 
                 
-                
-                
-                
                 </p>
                 <p class="stat-cards-info__title">Total users</p>
                 <p class="stat-cards-info__progress">
@@ -312,8 +309,11 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">
+
+				<%= new UserDao().countPurches() %>
+				</p>
+                <p class="stat-cards-info__title">Total Purches</p>
                 <p class="stat-cards-info__progress">
                   <span class="stat-cards-info__profit success">
                     <i data-feather="trending-up" aria-hidden="true"></i>0.24%
@@ -329,8 +329,8 @@
                 <i data-feather="file" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num"><%=new UserDao().countOrder() %></p>
+                <p class="stat-cards-info__title">Total Order</p>
                 <p class="stat-cards-info__progress">
                   <span class="stat-cards-info__profit danger">
                     <i data-feather="trending-down" aria-hidden="true"></i>1.64%
@@ -346,8 +346,10 @@
                 <i data-feather="feather" aria-hidden="true"></i>
               </div>
               <div class="stat-cards-info">
-                <p class="stat-cards-info__num">1478 286</p>
-                <p class="stat-cards-info__title">Total visits</p>
+                <p class="stat-cards-info__num">
+                <%= new UserDao().countProduct() %>
+                </p>
+                <p class="stat-cards-info__title">Total Product</p>
                 <p class="stat-cards-info__progress">
                   <span class="stat-cards-info__profit warning">
                     <i data-feather="trending-up" aria-hidden="true"></i>0.00%
