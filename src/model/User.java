@@ -38,6 +38,9 @@ private String email;
 private String mob;
 private String pass;
 private String terms;
+
+
+
 public int getUid() {
 	return uid;
 }
