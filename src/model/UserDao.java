@@ -5,8 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collection;
 
 import com.mysql.cj.protocol.Resultset;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 public class UserDao {
 	
@@ -137,5 +140,16 @@ public int countOrder() throws ClassNotFoundException, SQLException
 //	return ps.executeUpdate();
 	return a;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 }
