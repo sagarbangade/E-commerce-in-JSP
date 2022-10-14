@@ -425,8 +425,8 @@
                           <i data-feather="more-horizontal" aria-hidden="true"></i>
                         </button>
                         <ul class="users-item-dropdown dropdown">
-                          <li><a href="##">Update</a></li>
-                          <li><a href="Delete.jsp?pId=<%=u.getpId()%>">Trash</a>
+                          <li><a href="UpdatePurches.jsp?pId=<%=u.getpId()%>">Update</a></li>
+                          <li><a href="DeletePurches.jsp?pId=<%=u.getpId()%>">Trash</a>
                           
                         </ul>
                       </span>
